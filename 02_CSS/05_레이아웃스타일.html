@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+
+    <link rel="stylesheet" href="./05_레이아웃스타일.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+
+    <h2>기본스타일</h2>
+    <h3>width, height</h3>
+    <h4>고정 크기</h4>
+    <div id="fixed-size" class="size-test"></div>
+
+    <h4>가변 크기</h4>
+    <div id="variable-size" class="size-test"></div>
+
+    <hr>
+
+    <h3>화면 배치 방법 변경</h3>
+    <p>
+        - 블록 요소와 인라인 요소의 속성을 변경해서 배치방식을 변경할 수 있다.
+    </p>
+
+    <h4>블록요소를 인라인 요소로 변경</h4>
+    <p>display: inline</p>
+    <div id="area1" class="dispaly dispaly-inline">1 번째 영역</div>
+    <div id="area2" class="dispaly dispaly-inline">2 번째 영역</div>
+    <div id="area3" class="dispaly dispaly-inline">3 번째 영역</div>
+    <div id="area4" class="dispaly dispaly-inline">4 번째 영역</div>
+    <div id="area5" class="dispaly dispaly-inline">5 번째 영역</div>
+
+    <p>dispaly: inline-block</p>
+    <div id="area1" class="dispaly dispaly-inline-block">1 번째 영역</div>
+    <div id="area2" class="dispaly dispaly-inline-block">2 번째 영역</div>
+    <div id="area3" class="dispaly dispaly-inline-block">3 번째 영역</div>
+    <div id="area4" class="dispaly dispaly-inline-block">4 번째 영역</div>
+    <div id="area5" class="dispaly dispaly-inline-block">5 번째 영역</div>
+    
+    <h4>인라인 요소를 블록요소로 변경</h4>
+    <p>display: block</p>
+    <span id="area1" class="dispaly display-block">1 번째 영역</span>
+    <span id="area2" class="dispaly display-block">2 번째 영역</span>
+    <span id="area3" class="dispaly display-block">3 번째 영역</span>
+    <span id="area4" class="dispaly display-block">4 번째 영역</span>
+    <span id="area5" class="dispaly display-block">5 번째 영역</span>
+
+    <hr>
+
+    <h2>테두리 스타일</h2>
+    <div class="border" id="border-test1"></div> <br>
+    <div class="border" id="border-test2"></div> <br>
+    <div class="border" id="border-test3"></div> <br>
+    <div class="border" id="border-test4"></div> <br>
+    <div class="border" id="border-test5"></div> <br>
+    <div class="border" id="border-test6"></div> <br>
+    <div class="border" id="border-test7"></div> <br>
+    <div class="border" id="border-test8"></div> <br>
+    <div class="border" id="border-test9"></div> <br>
+    <div class="border" id="border-test10"></div> <br>
+
+    <hr>
+
+    <h2>여백 스타일</h2>
+
+    <div class="space">기준 div</div>
+
+    <h3>padding</h3>
+    <p>
+        테두리와 콘텐츠 영역사이의 거리 조절
+    </p>
+    <div class="space" id="padding1">전체 padding</div>
+    <br>
+    <div class="space" id="padding2">부분 padding</div>
+
+    <br>
+
+    <!-- 인라인 블록 요소에 패딩이나 마진을 줄때 inline-block으로 바꿔준다. -->
+    <!-- <span class="space" id="padding1" style="display: inline-block;">전체 패딩</span>
+
+    <br>
+
+    <span class="space" id="padding2" style="display: inline-block;">부분 패딩</span> -->
+
+
+    <hr>
+
+    <h3>margin</h3>
+    <p>
+        다른 요소들 간의 간격을 조절
+    </p>
+
+    <div class="space" id="margin1">전체 margin</div>
+    <div class="space" id="margin2">부분 margin</div>
+    <!-- <span class="space" id="margin1" style="display: inline-block;">전체 마진</span>
+    <span class="space" id="margin2" style="display: inline-block;">부분 마진</span> -->
+
+    <hr>
+    <h2>포지셔닝</h2>
+    <h3>position</h3>
+    <h4>절대 위치와 상대 위치</h4>
+
+    <div class="outer">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+
+    <h4>고정 위치</h4>
+    <div id="fixed-area"></div>
+
+    <hr>
+
+    <h3>visibility</h3>
+    <div class="visibility" id="v-test1"></div>
+    <div class="visibility" id="v-test2"></div>
+    <div class="visibility" id="v-test3"></div>
+
+    <hr>
+
+    <h3>z-index</h3>
+    <div id="z-outer">
+        <div class="z-test" id="z1"></div>
+        <div class="z-test" id="z2"></div>
+        <div class="z-test" id="z3"></div>
+    </div>
+
+    <hr>
+
+    <h3>float, clear</h3>
+    <p>
+        - float : 왼쪽이나 오른쪽에 요소의 위치를 띄우는것 <br>
+        - display 처럼 inline 레벨로 변경하는 것이 아니라 요소를 띄우는 것이다!!
+    </p>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+    <div class="float-test"></div>
+
+    <!--떠있는 상태이기 때문에 뒤에 있는 요소들이 영향을 받음-->
+    <!--float 영향을 지워주기 위해서(초기화) clear을 사용한다.-->
+    <hr style="clear: both;">
+
+<h2>다단 스타일</h2>
+<h3>단의 너비를 이용하여 단 나누기</h3>
+<div id="column1" class="column-wrap">
+    <h4>SKT 37년만에 쪼개진다.</h4>
+    1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다.
+앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+</div>
+
+<hr>
+
+<h3>단의 개수를 이용하여 단 나누기</h3>
+<div id="column2" class="column-wrap">
+    <h4>SKT 37년만에 쪼개진다.</h4>
+    <p>
+    1일 통신업계에 따르면 SK텔레콤은 이날 이사회를 열고 존속법인 SK텔레콤과 신설법인 SK스퀘어의 새 최고경영자를 선임한다.
+    앞서 SK텔레콤은 지난달 임시 주주총회에서 통신 분야를 맡는 존속법인 SK텔레콤과 ICT 투자를 맡는 신설법인 SK스퀘어로 인적분할을 단행하는 안건을 의결한 바 있다.
+    SK스퀘어는 박정호 현 SK텔레콤 대표이자 SK하이닉스 부회장이 이끈다. 박 CEO가 국내외 반도체 시장에서 공격적인 투자에 나설 것으로 기대된다. 윤풍영 현 SK텔레콤 최고재무책임자(CFO)도 SK스퀘어로 자리를 옮겨 최고투자책임자(CIO) 역할을 한다.
+    SK스퀘어는 지금까지 반도체, ICT 플랫폼 사업 투자를 통해 축적된 투자 성공 DNA를 바탕으로 현재 26조원인 순자산가치를 2025년 약 3배에 달하는 75조원으로 키운다는 목표다.
+    SK스퀘어 밑에는 SK하이닉스, SK쉴더스(전 ADT캡스), 11번가, 티맵모빌리티, 원스토어, 콘텐츠웨이브, 드림어스컴퍼니, SK플래닛, FSK L&S, 인크로스, 나노엔텍, 스파크플러스, SK텔레콤CST1, SK텔레콤TMT 인베스트먼트, IDQ, 테크메이커 등 16개사가 편제된다.
+    SK텔레콤 사명을 계승하는 존속법인은 유영상 이동통신사업 대표가 수장 역할을 한다. 지난해 15조원이었던 매출은 오는 2025년 22조원으로 목표를 설정했다. 
+    앞으로 SK텔레콤은 주력인 유무선 통신과 함께 인공지능(AI) 기반 구독사업과 메타버스 플랫폼 등 신사업 고도화에 역량을 집중할 계획이다.
+    산하에는 SK브로드밴드·SK텔링크·피에스앤마케팅·F&U신용정보·서비스탑·서비스에이스·SK오앤에스 등 7개 회사를 편제했다.
+</p>
+</div>
+
+<hr>
+
+<h2>테이블 스타일</h2>
+<table>
+    <caption>성적표</caption>
+    <tr>
+        <td>구분</td>
+        <td>점수</td>
+    </tr>
+    <tr>
+        <td>수학</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>국어</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>kdjhljdshgahgiuahdfvnvjdnsgjuhergiuhgadggdfgadrgaregagdfgregaergeaeretryrterfsdfaeqwearkjnvjsnvkjnxkjdgaiuhgjnvkjdshgkgjh</td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

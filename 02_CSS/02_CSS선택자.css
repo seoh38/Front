@@ -1,0 +1,280 @@
+/* *{ 
+    color: green;
+} */
+
+/*기본 속성 선택자 테스트*/
+/*div 중 name 속성값이 name1과 일치하는 태그*/
+div[name="name1"]{
+    background-color: orangered;
+}
+
+/*div 중에 name 속성값이 name1이 포함되어 있는 태그(속성값이 듸어 쓰기로 구분)*/
+div[name~="name1"] {
+    background-color: yellow;
+}
+
+/*div 중에 class 속성에서 class 로 시작되는 태그(-로 구분)*/
+div[class|="class"] {
+    background-color: aqua;
+}
+
+/*div 중에 name 속성이 name으로 시작되는 태그*/
+div[name^="name"] {
+    background-color: blue;
+}
+
+/*div 중에 class 속성이 calss 로 끝나는 경우 */
+div[class$="class"] {
+    color: white;
+}
+
+/*div 중에 class 속성 중에 i를 포함하는 태그 */
+div[class*=i] {
+    background-color: yellowgreen;
+    color: red;
+}
+
+/*class가 div-class인 것중 name 속성값에 name3이 포함되어 있는 경우*/
+.div-class[name~="name3"] {
+    background-color: hotpink;
+}
+
+/*----------------------------------------------------*/
+
+/* 자손 선택자와 후손 선택자 테스트 */
+#test1>h4{
+    background-color: lavender;
+}
+
+#test1>ul>li {
+    background-color: lemonchiffon;
+}
+
+#test1 li{
+    color: pink;
+}
+
+/* -------------------------------------------------- */
+/* 동위 선택자 테스트  */
+#div-test{
+    background-color: plum;
+}
+
+#div-test+div{
+    background-color: wheat;
+}
+
+/* #div-test~div{
+    background-color: wheat;
+} */
+
+/* ---------------------------------------------------- */
+/* 반응 선택자 테스트 */
+#active-test, #hover-test{
+    background-color: cornflowerblue;
+    width: 300px;
+    height: 300px;
+}
+
+#active-test:active {
+    background-color: lavenderblush;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+#hover-test:hover{
+    background-color: lightcoral;
+    color: olivedrab;
+}
+
+/* ---------------------------------------------------- */
+/* 상태 선택자 테스트 */
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+label[type=checkbox]:checked+label {
+    font-size: 30px;
+}
+
+/* focus 테스트 */
+#userId:focus, #userPwd:focus{
+    background-color: lightseagreen;
+    border: 2px solid lightpink;
+}
+
+/* enabled, disabled 테스트 */
+option:disabled {
+    background-color: lightskyblue;
+    color: white;
+}
+
+option:enabled{
+    background-color: lemonchiffon;
+}
+
+button:disabled{
+    color: red;
+}
+
+button:enabled{
+    color: rosybrown;
+}
+
+/* ----------------------------------------------------- */
+/* 일반 구조 선택자 */
+/* 형제 관계 태그 중 첫번째 태그 선택 */
+#test1 p:first-child{
+    background-color: rosybrown;
+    color: white;
+}
+
+/* 현제 관계 태그 중 마지막 태그 선택 */
+/* 마지막 자식이 p태그가 아니어서 스타일이 적용되지 않는다. */
+
+#test1 p:last-child{
+    background-color: rosybrown;
+    color: white;
+}
+
+
+/* 형제 관계 태그 중 앞에서 수열번째 태그 선택 */
+/* n은 계속 증가, 0부터 차례대로 증가하면서 정수를 대입 */
+/* 수식을 사용하거나 수식 대신에 odd(홀수), even(짝수)를 대입해 줄 수 있다. */
+#test1 p:nth-child(even){
+    background-color: lightsteelblue;
+}
+
+/* #test1 p:nth-child(odd){
+    background-color: lightgreen;
+} */
+
+/* 형제 관계 중 뒤에서 수열번째 태그 선택 */
+#test1 p:nth-last-child(4) {
+    background-color: lightpink;
+}
+
+/* ------------------------------------------------------ */
+/* 형태 구조 선택자 */
+/* 형제 관계 태그 중 첫번째 태그 선택 */
+#test2 p:first-of-type{
+    background-color: lightskyblue;
+    color: rosybrown;
+}
+
+/* 태그 별로 구분하기 때문에 p태그들만 가지고 위치를 파악하기 때문에 스타일이 적용 된다. */
+#test2 p:last-of-type{
+    background-color: lightslategray;
+    color: red;
+}
+
+#test2 p:nth-of-type(even){
+    background-color: lightsalmon;
+    color: royalblue;
+}
+
+/* 형제 관계 태그 중 앞에서 수열번째 태그 선택 */
+#test2 p:nth-last-of-type(4) {
+    background-color: pink;
+    color: teal;
+}
+
+/* -------------------------------------------------------- */
+/* 문자 선택자 테스트 */
+/* 첫 번째 글자를 선택해서 스타일 적용 */
+#test3 p::first-letter {
+    font-size: 2em ;
+}
+
+/* 첫 번째 라인을 선택해서 스타일 적용 */
+#test3 p::first-line {
+    background-color: wheat;
+}
+
+/* 태그 앞에 위치하는 공간을 선택 */
+#test3 p::before {
+    content: "1. ";
+}
+
+/* 태그 앞에 위치하는 공간을 선택 */
+#test3 p::after {
+    content: "아이유 박효신 그리고 nct127";
+    color: violet;
+}
+
+/* 사용자가 드래그한 글자 스타일 변경 */
+#test3 p::selection {
+    background-color: lavender;
+    color: white;
+}
+
+/* -------------------------------------------------------- */
+/* 부정 선택자 */
+/* #test4 p:not(.p1) {
+    background-color: lightpink;
+} */
+
+/* 선택자 안에 가상클래스를 넣을수도 있다. */
+#test4 p:not(:nth-child(even)) {
+    background-color: lightsalmon;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

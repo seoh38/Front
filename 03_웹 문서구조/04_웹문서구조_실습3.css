@@ -1,0 +1,65 @@
+*:not(h1) {
+    border: 1px solid #B5DEFF;
+    box-sizing: border-box;
+}
+.test1 {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+
+header {
+    height: 20%;
+}
+
+#header-contents {
+    height: 80%;
+}
+
+/* 부모 컨텐츠에 속성을 준다. */
+header>#header-contents>div {
+    height: 100%;
+    float: left;
+}
+
+#header1 {
+    width: 20%;
+}
+
+#header2 {
+    width: 60%;
+}
+
+#header3 {
+    width: 20%;
+}
+
+nav {
+    height: 20%;
+}
+
+section {
+    height: 60%;
+}
+
+section>article{
+    height: 100%;
+    float: left;
+}
+
+#content1 {
+    width: 30%;
+}
+
+#content2 {
+    width: 50%;
+}
+
+#content3 {
+    width: 20%;
+}
+
+footer {
+    height: 20%;
+}
+

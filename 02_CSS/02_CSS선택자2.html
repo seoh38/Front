@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자 2</title>
+    <!--
+        외부 스타일 시트
+        스타일만을 따로 관리하는 .css 확장자를 가지는 외부 문서를 만들고
+        <link> 태그를 통해 연결시켜주는 방법이다.
+    -->
+
+    <link rel="stylesheet" href="./02_CSS선택자.css">
+</head>
+<body>
+    <h1> CSS 기본 선택자 2</h1>
+    
+    <h3>1. 기본 속성 선택자</h3>
+    <p>
+        기본 선택자 뒤에 [ ] 를 사용하여 속성과 속성값을 사용한다.
+    </p>
+    <pre>
+        선택자[속성 = 속성값]{
+            스타일 속성 : 값;
+            스타일 속성 : 값;
+            ...
+        }
+    </pre>
+    <div class="div-class" name="name1">dii1</div>
+    <div class="div-class" name="name2">div2</div>
+    <div class="div-class" name="name3 name1">div3</div>
+    <div class="class-div" name="name3">div4</div>
+
+    <h3>2. 자손 선택자와 후손 선택자</h3>
+    <p>
+        자손 : 바로 하위 요소들 / 후손 : 하위 요소들 전부
+    </p>
+    <pre>
+        1. 자손 선택자
+            a>b {
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }
+        2. 후손 선택자
+            a b{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }
+    </pre>
+
+    <!--자식에 따로 스타일을 설정하지 않으면 부모의 스타일이 상속된다.-->
+    <!--but 상속이 되지 않는 스타일도 있다.-->
+    <div id="test1">
+        <h4>자손입니다.</h4>
+        <h4>나도 자손 입니다.</h4>
+        <ul>
+            <h4>나도 자손입니다.</h4>
+            <li>나는 ul의 자손이면서 div의 후손입니다.</li>
+            <li>나는 ul의 자손이면서 div의 후손입니다.</li>
+        </ul>
+        <li>나는 div의 자손입니다.</li>
+    </div>
+
+    <h3>3. 동위 선택자</h3>
+    <p>
+        동위 관계(같은 레벨)에서 뒤에 위치한 태그를 선택할 때 사용한다.
+    </p>
+    <pre>
+        1. a 선택자 뒤에 있는 b 요소 한개 선택
+            a+b{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }
+        2. a 선택자 뒤에 있는 모든 b 요소 선택
+            a~b{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }    
+    </pre>
+
+    <div id="div-test">div1</div>
+    <!-- <p>aa</p> -->
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+    <h3>4. 반응 선택자</h3>
+    <p>
+        사용자의 움직임에 따라 달라지는 선택자
+    </p>
+    <pre>
+        1. 사용자가 클릭하는 요소에 스타일 적용
+            선택자:active {
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }
+        2. 사용자가 마우스를 올려놓는 요소에 스타일을 적용
+            선택자:hover {
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }    
+    </pre>
+
+    <div id="active-test">active 테스트</div>
+    <br>
+    <div id="hover-test">hover 테스트</div>
+
+    <h3>5. 상태 선택자</h3>
+    <p>
+        요소에 상태에 따라 선택되는 선택자
+    </p>
+    <pre>
+        1. 체크된 형태의 태그의 스타일 변경
+            선택자:checked {
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...
+            }
+        2.   
+    </pre>
+
+    <!-- <label><input type="checkbox" name="fruits">사과</label>
+    <label><input type="checkbox" name="fruits">바나나</label>
+    <label><input type="checkbox" name="fruits">샤인머스켓</label>  -->
+ 
+    <br><br>
+    
+    <!--서버에 전송하기 위해서는 form으로 감싸준다.-->
+    <input type="checkbox" name="fruits" id="apple">
+    <label for="apple">사과</label> 
+    <input type="checkbox" name="fruits" id="banana">
+    <label for="banana">바나나</label>
+    <input type="checkbox" name="fruits" id="grape">
+    <label for="grape">샤인머스켓</label>
+
+    <br><br>
+
+    <pre>
+        2. 초점이 맞추어진 input 요소의 스타일 변경
+            선택자:focus{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...    
+            }
+    </pre>
+    <label for="userId">아이디 : </label>
+    <input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요.">
+
+    <br><br>
+
+    <label for="userPwd">비밀번호 : </label>
+    <input type="password" name="userpwd" id="userPwd" placeholder="패스워드를 입력하세요.">
+
+    <br><br>
+
+    <pre>
+        3. 사용이 가능한 요소의 스타일 변경
+            선택자:enabled{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...   
+            }
+
+        4. 사용이 불가능한 요소의 스타일 변경
+            선택자:disabled{
+                스타일 속성 : 값;
+                스타일 속성 : 값;
+                ...   
+            }
+    </pre>
+
+    <h3>당신의 연령대는?</h3>
+    <select>
+        <option disabled>10대</option>
+        <option>20대</option>
+        <option>30대</option>
+        <option>40대</option>
+        <option disabled>50대</option>
+    </select>
+
+    <button>버튼1</button>
+    <button disabled>버튼2</button>
+
+    <h3>6. 일반 구조 선택자</h3>
+    <p>
+        특정 위치에 있는 태그 선택(위치로 구분)
+    </p>
+
+    <div id="test1">
+        <!-- <pre>테스트0</pre> -->
+        <p>테스트 1</p>
+        <p>테스트 2</p>
+        <p>테스트 3</p>
+        <p>테스트 4</p>
+        <p>테스트 5</p>
+        <pre>테스트 6</pre>
+    </div>
+
+    <p>--------------------------------------------------------------</p>
+    <h3>7. 형태 구조 선택자</h3>
+    <p>
+        특정 위치에 있는 태그 선택(태그 별로 구분)
+    </p>
+    <div id="test2">
+        <!-- <pre>테스트0</pre> -->
+        <p>테스트 1</p>
+        <p>테스트 2</p>
+        <p>테스트 3</p>
+        <p>테스트 4</p>
+        <p>테스트 5</p>
+        <pre>테스트 6</pre>
+    </div>
+
+    <h3>8. 문자 선택자</h3>
+    <p>
+        태그 내부에서 특정 조건의 문자를 선택하는 선택자
+    </p>
+    
+    <div id="test3">
+        <p>
+            [데일리안 = 김민석 기자] 약 1시간 정도 KT 유·무선 인터넷 통신 장애가 발생하면서 일부 식당이나 매점에서 신용카드 결제 시스템이 불통되는 사태가 발생했다.
+            통신 장애는 대부분 정상화되고 있지만, 여전히 복구 작업이 더디게 진행되는 곳이 있는 만큼 소비자 피해가 더 확산될 것으로 전망된다.
+            25일 오전 11시쯤부터 서울을 비롯한 전국에서 KT의 유·무선 인터넷은 물론 기업망까지 이용이 불가능한 현상이 발생했다. 이에 따라 신용카드 결제 서비스도 동시에 마비됐다. 올해 상반기 기준 국내 8개 카드사의 신용카드 사용실적은 192조6213억원으로 전년 동기 173조2138억원 대비 1년 새 20조원 급증했다. 카드사용자가 대부분인 만큼 카드 이용 고객들의 대규모 피해가 예상된다.
+            특히 점심 시간을 앞둔 상황에서 일부 식당·상점 등에서는 신용카드 결제가 불가능해지면서 소비자들이 큰 불편을 겪었다. 아울러 배달 플랫폼에서도 카드 결제에 오류가 발생하면서 주문이 들어가지 않는 사태도 벌어졌다.
+            가장 피해가 큰 건 자영업자다. KT는 자영업과 관련해 다양한 상품을 올인원(All in one)으로 제공 중이다. 가격이 저렴하고 편리하다는 장점이 있지만, 오류가 나면 모든 시스템이 '마비'가 된다. 이에 일부 식당과 편의점 등에서는 신용카드 결제가 불가능했고, 배달의민족 등 배달 플랫폼도 접속이 원활하지 않았다.
+            이번 사태는 대규모 디도스(DDos) 공격으로 발생한 것으로 확인됐다. KT는 네트워크 장애 상황을 빨리 인지하고 위기관리위원회를 즉시 가동해 신속 조치중이다.
+            KT 유·무선 인터넷 서비스가 장애를 일으킨건 이번이 처음은 아니다. 2018년 충정로 KT아현국사에서 발생한 화재로 중구와 용산구, 서대문구 일대에 통신 장애가 이어진 바 있다.
+            당시 음식점과 상점에서 신용카드 결제가 먹통이 되면서 자영업자들이 피해를 입었다. 당시 KT는 화재로 통신장애 피해를 입은 지역의 유·무선 서비스 고객들의 1개월 치 통신료 요금을 감면하는 등의 지원책을 내놨다.
+        </p>
+    </div>
+
+    <h3>9. 부정 선택자</h3>
+    <p>
+        지금까지의 선택자에 대해 반대로 적용하는 선택자
+    </p>
+
+    <div id="test4">
+        <p>테스트 1</p>
+        <p>테스트 2</p>
+        <p class="p1">테스트 3</p>
+        <p>테스트 4</p>
+        <p>테스트 5</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

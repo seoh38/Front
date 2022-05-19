@@ -1,0 +1,308 @@
+
+/* 브라우저 전체를 같은 글꼴로 하고 싶다면 body에 글꼴 설정 */
+/* body{
+    font-family: '돋움';
+
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap'); */
+
+/* font-family 테스트 */
+#ff1{
+    font-family: '궁서체';
+}
+
+#ff2{
+    font-family: '굴림체';
+}
+
+#ff3{
+    font-family: '없는글꼴', 'hack', '휴먼둥근헤드라인';
+}
+
+#web {
+    font-size: 5em;
+    font-family: 'East Sea Dokdo', cursive;
+}
+
+/* font-size 테스트 */
+#size1{ /*가로 세로 격자 크기*/
+    font-size: 30px;
+}
+
+#size2{ /*1em을 기준으로 배수*/
+    font-size: 2em;
+}
+
+#size3{ /*100%를 기준으로 (2em = 200%)*/
+    font-size: 150%;
+}
+
+/* font-weight 테스트 */
+#fw1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#fw2{
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+#fw3{
+    font-size: 1.5em;
+    /* font-weight: 900; */
+    font-weight: bolder;
+}
+
+/* font-variant 테스트 */
+#fv{
+    font-variant: small-caps;
+}
+
+/* font-style 테스트 */
+#fs1{ /*처음부터 기울여져 있는 글자를 가져다가 씀*/
+    font-style: italic;
+}
+
+#fs2{ /*기본 글자를 억지로 기울임*/
+    font-style: oblique;
+}
+
+/* color 테스트 */
+#c-name { /*이름으로 제공해주는 색상들을 안전색상이라고 한다.*/
+    color: lightseagreen;
+}
+
+#c-16 { /*코드로 색을 지정할 수 있다.*/
+    color: #ba0bf0;
+}
+
+#c-rgb { /*10진수로 표현해준다. rgb 한자리 수를 0~255로 표현할 수 있다.*/
+    color: rgb(230, 192, 51);
+}
+
+#c-rgba { /*alpha : 0~1 까지 투명도 지정해줄 수 있다. 0이면 완전 투명!*/
+    color: rgba(230, 192, 51, .3);
+}
+
+/* text-decoration 테스트 */
+#td1 {
+    text-decoration: underline;
+}
+
+#td2 {
+    text-decoration: line-through;
+}
+
+#td3 {
+    text-decoration: overline;
+}
+
+#td4 {
+    text-decoration: none;
+}
+
+/* text-transform 테스트 */
+#tt1{
+    text-transform: none;
+}
+
+#tt2 { /*앞글자를 대문자로 바꿔줌*/
+    text-transform: capitalize;
+}
+
+#tt3 {
+    text-transform: uppercase;
+}
+
+#tt4 {
+    text-transform: lowercase;
+}
+
+/* text-shadow */
+#bg {
+    background-color: black;
+    padding: 50px;
+    margin: 3px;
+}
+
+.shadow {
+    font-size: 100px;
+    font-weight: 900;
+    line-height: 30px;
+}
+
+#ts1 {
+    color: orange;
+    text-shadow: 0px 0px 20px white; 
+}
+
+#ts2 {
+    color: white;
+    text-shadow: 0px 0px 30px #fff;
+}
+
+#ts3 {
+    color: white;
+    text-shadow: 1px 1px 20px greenyellow;
+}
+
+#ts4 { /*,를 사용해서 text-shadow를 여러개 설정할 수 있다.*/
+    text-shadow: 0px 0px 0px #ccc,
+                0px -5px 4px #ff3,
+                2px -10px 6px #fd3,
+                -2px -12px 11px #f80,
+                2px -19px 18px #f20;
+}
+
+/* letter-spacing */
+#spacing1 {
+    letter-spacing: 10px;
+}
+
+/* word-spacing */
+#spacing2 {
+    word-spacing: 10px;
+}
+
+/* text-align */
+#ta1 {
+    text-align: left;
+}
+
+#ta2 {
+    text-align: right;
+}
+
+#ta3 {
+    text-align: center;
+}
+
+#ta4 {
+    text-align: justify;
+}
+
+/* text-indent */
+#ti {
+    text-indent: 20px;
+}
+
+/* line-height */
+#lh { /*숫자가 작을수록 줄 간격이 좁다.*/
+    line-height: 20px; 
+}
+
+/* text-overflow */
+.over-class {
+    background-color: lavender;
+    width: 500px;
+}
+
+#to {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
